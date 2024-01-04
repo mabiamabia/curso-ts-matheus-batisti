@@ -113,3 +113,94 @@ function showUserRole(role: boolean | string){
 
 console.log(showUserRole(false));
 console.log(showUserRole("admin"));
+
+// type alias
+
+type ID = string | number
+
+function showId(id: ID) {
+    console.log(`O Id é: ${id}`);
+}
+
+showId(1)
+showId("200")
+
+// 13 - interface
+
+interface Point {
+    w: number
+    y: number
+    z: number
+}
+
+function showCoords(obj: Point){
+    console.log(`W: ${obj.w} Y: ${obj.y} Z: ${obj.z}`);
+}
+
+const coordObj: Point = {
+    w: 10,
+    y: 12,
+    z: 40,
+}
+console.log(coordObj);
+
+
+// 14 - interface x type alias
+
+interface Person {
+    name: string
+}
+
+interface Person {
+    age: number
+}
+
+const somePerson: Person = {name: "Matheus", age: 30}
+
+console.log(somePerson);
+
+// 15 - literal types
+
+let test: "testando"
+
+//test = 1 //não aceita
+
+test = "testando"
+
+//usar literal types com union types
+
+function showDirection(direction: "left" | "right" |  "center"){
+    console.log(`A direção é: ${direction}`);
+    
+}
+
+showDirection("center")
+showDirection("left")
+
+// 16 - Non-null Assertion operator
+
+// const p = document.getElementById("some-p")
+
+// console.log(p!.innerText);
+
+// 17 - Bigint
+
+let n: bigint
+
+n = 1000n
+
+console.log(n);
+
+console.log(typeof n);
+
+// 18 -  Symbol
+
+let symbolA:symbol = Symbol("a")
+
+let symbolB = Symbol("b")
+
+console.log(symbolA == symbolB);
+
+console.log(symbolA === symbolB);
+
+

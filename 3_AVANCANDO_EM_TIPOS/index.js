@@ -74,6 +74,42 @@ function showUserRole(role) {
 }
 console.log(showUserRole(false));
 console.log(showUserRole("admin"));
-
-// type alias
-
+function showId(id) {
+    console.log(`O Id é: ${id}`);
+}
+showId(1);
+showId("200");
+function showCoords(obj) {
+    console.log(`W: ${obj.w} Y: ${obj.y} Z: ${obj.z}`);
+}
+const coordObj = {
+    w: 10,
+    y: 12,
+    z: 40,
+};
+console.log(coordObj);
+const somePerson = { name: "Matheus", age: 30 };
+console.log(somePerson);
+// 15 - literal types
+let test;
+//test = 1 //não aceita
+test = "testando";
+//usar literal types com union types
+function showDirection(direction) {
+    console.log(`A direção é: ${direction}`);
+}
+showDirection("center");
+showDirection("left");
+// 16 - Non-null Assertion operator
+// const p = document.getElementById("some-p")
+// console.log(p!.innerText);
+// 17 - Bigint
+let n;
+n = 1000n;
+console.log(n);
+console.log(typeof n);
+// 18 -  Symbol
+let symbolA = Symbol("a");
+let symbolB = Symbol("b");
+console.log(symbolA == symbolB);
+console.log(symbolA === symbolB);
