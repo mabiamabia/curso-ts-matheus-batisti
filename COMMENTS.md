@@ -8,6 +8,8 @@
 
 4. Narrowing(verificação)
 
+- Verifica qual o tipo de dado esta sendo retornado quando é possivel retornar varios tipos
+
 5. Funções com TS
 
 6. Entendendo os Object Types
